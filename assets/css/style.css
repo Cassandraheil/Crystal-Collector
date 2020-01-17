@@ -1,0 +1,8 @@
+body{
+    background-color: cornflowerblue;
+    /* background: url(../images/background.jpg); */
+}
+#crystals{
+    height: 250px;
+    width: 200px;
+    }
