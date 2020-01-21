@@ -17,6 +17,7 @@ body{
     max-width: 900px;
     font-family: fantasy;
     background-color: rgb(194, 26, 157);
+    margin-top: 20px;
     box-sizing: border-box;
     color: wheat;
     font-size: 30px;
