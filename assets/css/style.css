@@ -1,5 +1,7 @@
 body{
-    background-color: cornflowerblue;
+    background: url(../images/crystal_image.jpg);
+    height: max-content;
+    width: max-content;
 }
 .crystal{
     height: 250px;
@@ -12,13 +14,25 @@ body{
 #container{
     margin: 20px;
     padding: 20px;
-    text-align: center;
     margin: auto;
     max-width: 900px;
     font-family: fantasy;
-    background-color: rgb(194, 26, 157);
+    background-color: rgb(182, 90, 162);
+    border-radius: 20px;
     margin-top: 20px;
     box-sizing: border-box;
     color: wheat;
+    font-size: 20px;
+}
+h3{
+    font-size: 25px;
+}
+.wrapper{
+    padding: 10px;
+    border: 2px solid blue;
+    border-radius: 20px;
+}
+.h1{
     font-size: 30px;
+text-align: center;
 }
