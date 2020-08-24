@@ -9,8 +9,12 @@ body{
     display: inline-block;
     margin-top: 20px;
     margin-left: 80px;
-    border-radius: 20px;
+    border-radius: 40px;
+    border: 4px solid rgb(182, 90, 162);
     }
+.crystal:hover {
+    border: 6px solid blue;
+}
 #container{
     margin: 20px;
     padding: 20px;
