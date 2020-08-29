@@ -5,15 +5,20 @@ $(document).ready(function(){
     $("#losses").html("Losses: "+ losses)
     $("#wins").html("Wins: "+ wins)
 
+
+    $("#easyBtn").on("click", easyMode);
+    $("#hardBtn").on("click", hardMode);
+
+    function easyMode(){
     
-    var goalNumber = Math.floor(Math.random()* 101 + 1) 
+        var goalNumber = Math.floor(Math.random()* 101 + 1) 
             $("#goalNumber").text(goalNumber + 19);
             console.log(goalNumber)
 
 
         var randomNumber = Math.round(Math.random()* 11 + 1);
         
-        for (i = 0; i < 5; i++){  
+        for (i = 0; i < 4; i++){  
                 var crystal = $("<img>");
                 crystal.addClass("crystal");
                 crystal.attr("src", "https://images-na.ssl-images-amazon.com/images/I/41V8nsnhKVL._SX425_.jpg"); //possibly get differrent imagaes from folder instead of internet
@@ -23,6 +28,8 @@ $(document).ready(function(){
 
                 $("#crystals").append(crystal); 
         }
+
+    }
 
     
 
@@ -36,13 +43,13 @@ $(document).ready(function(){
 
             alert("your new score is " + counter )
             if (counter === goalNumber + 19){
-                alert("you win!");
+                alert("You Win! :)");
                 wins ++;
                 $("#wins").html("Wins: "+ wins)
                 reset()
             }
             else if (counter >= goalNumber + 19){
-                alert("you lose")
+                alert("You Lose :(")
                 losses ++;
                 $("#losses").html("Losses: "+ losses) 
             reset()
@@ -55,7 +62,7 @@ function reset(){
             console.log("this just reset")
             counter =0
 
-        var numberArray = [12, 1, 4, 8, 9];
+        var numberArray = [12, 1, 4, 8, 9, 3, 4];
         
         for (i = 0; i <  numberArray.length; i++){  
                 crystal.attr("data-value", numberArray[i]);

@@ -20,6 +20,7 @@ body{
     padding: 20px;
     margin: auto;
     max-width: 900px;
+    width: 70%;
     font-family: fantasy;
     background-color: rgb(182, 90, 162);
     border-radius: 20px;
@@ -27,6 +28,12 @@ body{
     box-sizing: border-box;
     color: wheat;
     font-size: 20px;
+}
+#crystals {
+    margin: 20px;
+    padding: 20px;
+    /* margin: auto; */
+    max-width: 900px;
 }
 h3{
     font-size: 25px;
