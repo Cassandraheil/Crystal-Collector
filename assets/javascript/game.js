@@ -10,8 +10,13 @@ $(document).ready(function(){
     $("#hardBtn").on("click", hardMode);
 
     function easyMode(){
+        console.log("easy mode bitch")
+    }
+    function hardMode(){
+        console.log("this shit be haaaaard")
+    }
     
-        var goalNumber = Math.floor(Math.random()* 101 + 1) 
+    var goalNumber = Math.floor(Math.random()* 101 + 1) 
             $("#goalNumber").text(goalNumber + 19);
             console.log(goalNumber)
 
@@ -21,7 +26,8 @@ $(document).ready(function(){
         for (i = 0; i < 4; i++){  
                 var crystal = $("<img>");
                 crystal.addClass("crystal");
-                crystal.attr("src", "https://images-na.ssl-images-amazon.com/images/I/41V8nsnhKVL._SX425_.jpg"); //possibly get differrent imagaes from folder instead of internet
+                crystal.attr("src", "https://images-na.ssl-images-amazon.com/images/I/41V8nsnhKVL._SX425_.jpg"); 
+                
                 crystal.attr("data-value", randomNumber);
                 randomNumber = Math.round(Math.random()* 11 + 1)
 
@@ -29,7 +35,6 @@ $(document).ready(function(){
                 $("#crystals").append(crystal); 
         }
 
-    }
 
     
 
