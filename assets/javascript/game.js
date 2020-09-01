@@ -30,6 +30,29 @@ $(document).ready(function(){
     
             $("#crystals").append(crystal); 
             }
+            $(".crystal").on("click", function(){
+                console.log("bleh")
+                var crystalValue = ($(this).attr("data-value"));
+                crystalValue = parseInt(crystalValue);
+                
+        
+                    counter += crystalValue;
+                
+        
+                    alert("your new score is " + counter )
+                    if (counter === goalNumber + 19){
+                        alert("You Win! :)");
+                        wins ++;
+                        $("#wins").html("Wins: "+ wins)
+                        reset()
+                    }
+                    else if (counter >= goalNumber + 19){
+                        alert("You Lose :(")
+                        losses ++;
+                        $("#losses").html("Losses: "+ losses) 
+                    reset()
+                    }        
+            });
     }
 
     function hardMode(){
@@ -42,7 +65,32 @@ $(document).ready(function(){
             randomNumber = Math.round(Math.random()* 11 + 1)
     
             $("#crystals").append(crystal); 
-            }    }
+            }    
+        
+            $(".crystal").on("click", function(){
+                console.log("bleh")
+                var crystalValue = ($(this).attr("data-value"));
+                crystalValue = parseInt(crystalValue);
+                
+        
+                    counter += crystalValue;
+                
+        
+                    alert("your new score is " + counter )
+                    if (counter === goalNumber + 19){
+                        alert("You Win! :)");
+                        wins ++;
+                        $("#wins").html("Wins: "+ wins)
+                        reset()
+                    }
+                    else if (counter >= goalNumber + 19){
+                        alert("You Lose :(")
+                        losses ++;
+                        $("#losses").html("Losses: "+ losses) 
+                    reset()
+                    }        
+            });
+        }
     
     var goalNumber = Math.floor(Math.random()* 101 + 1) 
             $("#goalNumber").text(goalNumber + 19);
@@ -62,30 +110,30 @@ $(document).ready(function(){
     //     }
 
 
-    
 
-    $(".crystal").on("click", function(){
-        var crystalValue = ($(this).attr("data-value"));
-        crystalValue = parseInt(crystalValue);
+    // $(".crystal").on("click", function(){
+    //     console.log("bleh")
+    //     var crystalValue = ($(this).attr("data-value"));
+    //     crystalValue = parseInt(crystalValue);
         
 
-            counter += crystalValue;
+    //         counter += crystalValue;
         
 
-            alert("your new score is " + counter )
-            if (counter === goalNumber + 19){
-                alert("You Win! :)");
-                wins ++;
-                $("#wins").html("Wins: "+ wins)
-                reset()
-            }
-            else if (counter >= goalNumber + 19){
-                alert("You Lose :(")
-                losses ++;
-                $("#losses").html("Losses: "+ losses) 
-            reset()
-            }        
-    });
+    //         alert("your new score is " + counter )
+    //         if (counter === goalNumber + 19){
+    //             alert("You Win! :)");
+    //             wins ++;
+    //             $("#wins").html("Wins: "+ wins)
+    //             reset()
+    //         }
+    //         else if (counter >= goalNumber + 19){
+    //             alert("You Lose :(")
+    //             losses ++;
+    //             $("#losses").html("Losses: "+ losses) 
+    //         reset()
+    //         }        
+    // });
 
 function reset(){
         var goalNumber = Math.floor(Math.random()* 101) 
