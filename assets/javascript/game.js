@@ -2,6 +2,8 @@ $(document).ready(function(){
     var counter = 0
     var losses = 0
     var wins = 0 
+    var number = 4
+
     $("#losses").html("Losses: "+ losses)
     $("#wins").html("Wins: "+ wins)
 
@@ -11,8 +13,10 @@ $(document).ready(function(){
 
     function easyMode(){
         console.log("easy mode bitch")
+        number = 4
     }
     function hardMode(){
+        number = 8
         console.log("this shit be haaaaard")
     }
     
@@ -21,18 +25,18 @@ $(document).ready(function(){
             console.log(goalNumber)
 
 
-        var randomNumber = Math.round(Math.random()* 11 + 1);
+    var randomNumber = Math.round(Math.random()* 11 + 1);
+
         
-        for (i = 0; i < 4; i++){  
-                var crystal = $("<img>");
-                crystal.addClass("crystal");
-                crystal.attr("src", "https://images-na.ssl-images-amazon.com/images/I/41V8nsnhKVL._SX425_.jpg"); 
+    for (i = 0; i < number; i++){  
+        var crystal = $("<img>");
+        crystal.addClass("crystal");
+        crystal.attr("src", "https://images-na.ssl-images-amazon.com/images/I/41V8nsnhKVL._SX425_.jpg"); 
                 
-                crystal.attr("data-value", randomNumber);
-                randomNumber = Math.round(Math.random()* 11 + 1)
+        crystal.attr("data-value", randomNumber);
+        randomNumber = Math.round(Math.random()* 11 + 1)
 
-
-                $("#crystals").append(crystal); 
+        $("#crystals").append(crystal); 
         }
 
 
