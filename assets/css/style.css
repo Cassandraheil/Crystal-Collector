@@ -47,3 +47,12 @@ h3{
     font-size: 30px;
 text-align: center;
 }
+button {
+    border: 3px solid black;
+    border-radius: 50px;
+    background-color: blue;
+    color: wheat;
+    font-size: 20px;
+    font-family: fantasy;
+    width: 80px;
+}
